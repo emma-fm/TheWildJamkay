@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/sample_platformer.tmx-e8fd33d8cf3eac36a9f3de36b1a2216d.scn"
+
+[deps]
+
+source_file="res://Graphics/Other/Tilemap/sample_platformer.tmx"
+dest_files=[ "res://.import/sample_platformer.tmx-e8fd33d8cf3eac36a9f3de36b1a2216d.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

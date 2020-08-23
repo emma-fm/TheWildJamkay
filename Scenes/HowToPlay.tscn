@@ -1,0 +1,250 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Graphics/Other/Font.tres" type="BitmapFont" id=1]
+[ext_resource path="res://Scenes/Clients/Astronaut.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Graphics/Tilesheet/colored_transparent_packed.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Clients/Rat.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Clients/Crocodile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Graphics/Face4.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Face3.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Face1.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Face2.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/PlayerOne.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/PlayerTwo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/HowToPlay.gd" type="Script" id=12]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.667419
+margin_bottom = 0.667419
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BigLabel" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -263.302
+margin_top = 34.4611
+margin_right = -87.3019
+margin_bottom = 48.4611
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "HOW TO PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explain1" type="Label" parent="CanvasLayer"]
+margin_left = 82.0
+margin_top = 145.0
+margin_right = 269.0
+margin_bottom = 235.0
+custom_fonts/font = ExtResource( 1 )
+text = "THROW THE
+
+
+
+
+FOOD THEY
+
+
+
+WANT TO
+
+
+
+THE WALKING
+
+
+
+CUSTOMERS"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explain3" type="Label" parent="CanvasLayer"]
+margin_left = 421.0
+margin_top = 117.0
+margin_right = 679.0
+margin_bottom = 207.0
+custom_fonts/font = ExtResource( 1 )
+text = "IF THEY GET THE
+
+
+
+WRONG ORDER OR
+
+
+
+IF THEY DONT GET
+
+
+
+SERVED THEY WILL
+
+
+
+GET ANGRY"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explain4" type="Label" parent="CanvasLayer"]
+margin_left = 82.0
+margin_top = 387.0
+margin_right = 628.0
+margin_bottom = 477.0
+custom_fonts/font = ExtResource( 1 )
+text = "AND WATCH OUT THE HAPPINESS METER
+
+
+
+IF THE CUSTOMERS GET TOO ANGRY
+
+
+
+ITS GAME OVER"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explain5" type="Label" parent="CanvasLayer"]
+margin_left = 96.0
+margin_top = 513.0
+margin_right = 642.0
+margin_bottom = 628.0
+custom_fonts/font = ExtResource( 1 )
+text = "PLAYER 1 MOVES WITH WASD 
+
+
+GRABS AND THROWS WITH V
+
+
+DROP ITEM WITH B
+
+
+
+
+
+
+PLAYER 2 MOVES WITH ARROW KEYS
+
+
+GRABS AND THROWS WITH ENTER
+
+
+DROP ITEM WITH BACKSPACE
+
+
+
+
+
+PAUSE WITH ESCAPE"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Explain2" type="Label" parent="CanvasLayer"]
+margin_left = 171.0
+margin_top = 286.0
+margin_right = 399.0
+margin_bottom = 387.0
+custom_fonts/font = ExtResource( 1 )
+text = "DONT FEED 
+
+
+
+ANYTHING TO
+
+
+
+RATS OR 
+
+
+
+CROCODILES"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 32.0
+margin_top = 655.0
+margin_right = 129.0
+margin_bottom = 694.0
+custom_fonts/font = ExtResource( 1 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Astronaut" parent="." instance=ExtResource( 2 )]
+position = Vector2( 279.698, 182.228 )
+scale = Vector2( 2, 2 )
+speed = 0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 591.15, 208.542 )
+rotation = -0.44855
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 200, 470 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 250, 470 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 300, 470 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 350, 470 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 328.137, 151.3 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 528, 256, 16, 16 )
+
+[node name="Rat" parent="." instance=ExtResource( 4 )]
+position = Vector2( 374.674, 294.177 )
+scale = Vector2( 2, 2 )
+speed = 0
+
+[node name="Crocodile" parent="." instance=ExtResource( 5 )]
+position = Vector2( 146.364, 328 )
+scale = Vector2( 2, 2 )
+speed = 0
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+position = Vector2( 583.715, 543.475 )
+scale = Vector2( 2, 2 )
+
+[node name="Player2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 406.285, 639.942 )
+scale = Vector2( 2, 2 )
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Good.wav-61fdae92a6888a3a4c5d6b168e66db54.sample"
+
+[deps]
+
+source_file="res://Sound/Good.wav"
+dest_files=[ "res://.import/Good.wav-61fdae92a6888a3a4c5d6b168e66db54.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

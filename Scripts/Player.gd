@@ -2,7 +2,8 @@ extends KinematicBody2D
 
 var velocity
 var speed = 100
-var player = "p1"
+export var player = "p1"
+export var getinput = true
 var grabrange = []
 var item = null
 
@@ -26,7 +27,8 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	get_input()
+	if getinput:
+		get_input()
 	velocity = move_and_slide(velocity)
 	pass
 	
@@ -46,6 +48,9 @@ func get_input():
 			throw()
 		else:
 			grab()
+	elif Input.is_action_just_pressed(player + "_drop"):
+		if item:
+			drop()
 	pass
 
 func cangrab(item):
@@ -68,8 +73,9 @@ func grab():
 	pass
 	
 func hold(i):
+	$PickSound.play()
 	item = i
-	item.is_held = true
+	item.picked()
 	get_parent().remove_child(item)
 	add_child(item)
 	item.position.x = 0
@@ -77,6 +83,7 @@ func hold(i):
 	pass
 
 func throw():
+	$ThrowSound.play()
 	remove_child(item)
 	get_parent().add_child(item)
 	item.position = position + Vector2(0, -10)
@@ -90,6 +97,17 @@ func throw():
 	$AnimatedSprite.play("walk")
 	pass
 
+func drop():
+	$PickSound.play()
+	remove_child(item)
+	get_parent().add_child(item)
+	item.position = position + Vector2(0, 10)
+	item.is_held = false
+	grabrange.erase(item)
+	item.dropped()
+	item = null
+	$AnimatedSprite.play("walk")
+	
 class Sorter:
 	static func mysort(a, b):
 		if a.is_held and not b.is_held:

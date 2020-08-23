@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/sample_interior.tmx-0206033e7b4df5b1e898333ae2804cac.scn"
+
+[deps]
+
+source_file="res://Graphics/Other/Tilemap/sample_interior.tmx"
+dest_files=[ "res://.import/sample_interior.tmx-0206033e7b4df5b1e898333ae2804cac.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""
